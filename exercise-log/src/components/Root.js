@@ -25,6 +25,7 @@ class Root extends Component {
 
         next()
     }
+
     redirectLoggedInUser(nextState, replace, next) {
         var user = firebase.auth().currentUser;
 
@@ -34,6 +35,7 @@ class Root extends Component {
 
         next();
     }
+    
     render() {
         return (
             <Router history={hashHistory}>
