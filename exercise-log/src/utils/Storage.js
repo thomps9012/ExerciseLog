@@ -3,13 +3,16 @@ import moment from 'moment';
 import shortid from 'shortid';
 
 class Storage {
-    constructor(){
+    constructor() {
         var config = {
-            apiKey: "",
-            authDomain: "",
-            databaseURL: "",
-            storageBucket: "",
-            messageingSenderId: ""
+            apiKey: "AIzaSyBqLF1-pUmo-dzDuhXcxVw4N9KEIM5vqaY",
+            authDomain: "health-hub-1d4fa.firebaseapp.com",
+            databaseURL: "https://health-hub-1d4fa.firebaseio.com",
+            projectId: "health-hub-1d4fa",
+            storageBucket: "health-hub-1d4fa.appspot.com",
+            messagingSenderId: "190127462841",
+            appId: "1:190127462841:web:861b745b5832cbe31bfe68",
+            measurementId: "G-0G0YR219QL"
         };
 
         this.app = firebase.initializeApp(config);
@@ -19,7 +22,7 @@ class Storage {
         const user = firebase.auth().currentUser;
         const uid = user && user.uid;
 
-        if(!uid) {
+        if (!uid) {
             return null;
         }
 
