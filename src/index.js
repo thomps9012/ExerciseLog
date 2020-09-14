@@ -1,10 +1,17 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
 
-import '!style!css!bootstrap/dist/css/bootstrap.css';
-import '!style!css!bootstrap/dist/css/bootstrap-theme.css';
-import '!style!css!./styles/main.css';
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-import Root from './components/Root';
-
-render(<Root />, document.getElementById('app'));
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
